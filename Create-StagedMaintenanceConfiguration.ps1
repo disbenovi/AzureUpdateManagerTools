@@ -13,12 +13,8 @@
             JSON-formatted parameter that will define the scope of the new maintenance configurations. See https://github.com/disbenovi/AzureUpdateManagerTools for more details.
 .NOTES
     OG AUTHOR: Helder Pinto and Wiszanyel Cruz
-    FORKED BY: Navi Singh.PARAMETER NextStagePropertiesJson
-            JSON-formatted parameter for new maintenance configurations. More details at https://github.com/disbenovi/AzureUpdateManagerTools.
-.NOTES
-    OG AUTHOR: Helder Pinto and Wiszanyel Cruz
-    FORKED BY: Navi Singh
-    
+    FORKED BY: Navi Singh.
+        
     Lines 28-40 manipulate `NextStagePropertiesJson` to address `jsonencode` function's formatting in Terraform,
     which adds extra newlines and escape sequences. Steps include:
     1. **Remove Newline Characters**: `-replace '\\', ''` removes backslashes added by `jsonencode`.
