@@ -34,9 +34,6 @@ param(
 
 # Remove newline characters from the JSON string
 $NextStagePropertiesJson = $NextStagePropertiesJson -replace '\\', ''
-# Replacement to properly format the "aum-stage" value in an array
-$NextStagePropertiesJson = $NextStagePropertiesJson -replace '("aum-stage":)"([^"]+)"', '$1["$2"]'
-
 # Now, convert the cleaned JSON string to an object
 try {
     $NextStageProperties = $NextStagePropertiesJson | ConvertFrom-Json
